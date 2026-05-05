@@ -1,0 +1,133 @@
+body{
+    margin: 0;
+    background-color: var(--fondo);
+    color: var(--texto);
+    /*font-family:; tipo de letra*/
+}
+header{
+    padding: 20px;
+}
+
+main{
+    height: 50vh;
+    display: flex;
+    flex-direction: column; /*un elemento abajo de otro */
+    justify-content: center; /* centrado vertical */
+    align-items: center; /* centrado horizontal */ 
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.intro{
+    font-size: 1.2rem ;
+    color: var(--secundario);
+    margin-bottom: 20px;
+}
+
+.contenedor-proyectos{
+    display: flex; /* para que las card sean flexibles y se acomoden a el tamaño de pantalla el flex y todo lo otro tiene que ir en el contenedor no en cada card en especifico*/
+    gap: 20px; /*separacion prolija*/
+    flex-wrap: wrap; /*permite que bajen en linea*/
+    justify-content: center; /*las centra*/
+}
+
+.proyecto{
+    padding: 15px; /*espacio interno hasta el borde de lo que esta adentro*/
+    margin: 30px; /*separacion entre bloques*/
+    border-radius: 5px; /*forma bordes redondos*/
+    background-color: var(--card);
+    width: 100%; /*ancho de la caja*/
+    max-width: 400px;
+    font-size: large;
+    gap: 10px; /*espacio entre los elementos de la card*/
+
+
+    display: flex; /* para que todo se pueda mover, queda flexible*/
+    flex-direction: column; /*que quede una cosa abajo de otra*/
+    align-items: center; /*que todo quede alineado en el centro*/
+    text-align: center; /*centra el texto*/
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-height: 200px; /*le da la altura a la card*/
+    justify-content: space-between; /*hace que cada uno respete su lugar dentro de la card*/
+}
+
+.proyecto:hover{
+    transform: translateY(-5px); /*se elevan levemente las card al pasar con el mouse por encima*/
+    transition: 0.5s; /*no salta tanto, si no que lo hace un poco mas leve*/
+}
+
+.oculto{
+    display: none; /*oculta lo que queria ocultar*/
+}
+
+.links a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: var(--detalle);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+} 
+
+section{
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.skills span {
+    background-color: var(--secundario);
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+.ver-mas {
+    background-color: var(--primario);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.proyecto:hover{
+    background-color: var(--secundario);
+}
+
+:root {
+  --fondo: #f5f1e9;        /* beige claro */
+  --card: #ffffff;         /* blanco suave */
+  --primario: #6b705c;     /* verde oliva */
+  --secundario: #a5a58d;   /* oliva claro */
+  --texto: #2b2b2b;        /* gris oscuro */
+  --detalle: #cb997e;      /* tierra suave */
+}
+
+.contacto-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contacto-links a{
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: 500;
+}
+
+.contacto-links a:not(:last-child)::after {
+    content: " | ";
+    margin-left: 10px;
+    color: var(--secundario);
+}
