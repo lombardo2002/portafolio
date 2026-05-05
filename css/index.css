@@ -15,6 +15,9 @@ main{
     justify-content: center; /* centrado vertical */
     align-items: center; /* centrado horizontal */ 
 }
+main, section {
+    padding: 0 16px;
+}
 
 h1{
     font-size: clamp(2rem, 5vw, 3.5rem);
